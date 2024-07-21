@@ -87,6 +87,50 @@
   font-size: 1em;
   padding: 15px 0;
 }
+.links::after {
+  display: block;
+  content: "";
+  width: 0px;
+  height: 3px;
+  margin: 5px 0;
+  background: transparent;
+}
+.links:hover::after {
+  animation: border 1.4s infinite ease-in-out;
+}
+@keyframes border {
+  from {
+    background: transparent;
+    width: 0;
+  }
+  to {
+    background: linear-gradient(90deg, yellow, orange, green, blue);
+    width: 100%;
+  }
+}
+.guidtop .links {
+  display: inline-block;
+  background: #ffffffcc;
+  color: #000;
+  margin: 10px 0;
+  padding: 8px 20px;
+  border-radius: 15px;
+  font-size: 0.8em;
+}
+.fa-arrow-up-right-from-square{
+  margin: 0 10px 0 0;
+}
+.guidtop .links::after {
+  display: none;
+}
+@keyframes pale {
+  from {
+    background: #ffffffcc;
+  }
+  to {
+    background: linear-gradient(90deg, yellow, orange, green, blue);
+  }
+}
 .txtcenter {
   text-align: center;
 }
@@ -117,7 +161,7 @@ h2 {
   font: 500 1.8em/0.8 Arial;
   margin: 20px 0;
 }
-#accessories h2{
+#accessories h2 {
   font-weight: 600;
   margin: 20px 0 30px 0;
 }
@@ -152,9 +196,17 @@ h6 {
   color: #fff;
   font-size: 0.8em;
   padding: 10px 25px;
+  border: 2px solid transparent;
   border-radius: 30px;
-  background: var(--blue);
   margin: 10px 0;
+  transition: all 0.3s;
+  background: var(--blue);
+}
+.btn:hover {
+  box-shadow: 3px 5px 7px #010e42;
+}
+#titanium .btn:hover {
+  box-shadow: 3px 5px 7px rgb(172, 185, 236);
 }
 .titanbtm {
   height: 50vh;
@@ -176,10 +228,10 @@ h6 {
   height: 50vh;
   background: url("../img/applebg12.jpeg") center / cover no-repeat;
 }
-.phones{
+.phones {
   padding: 20px 0;
 }
-.phones hr{
+.phones hr {
   width: 60%;
   margin: auto;
 }
@@ -193,12 +245,12 @@ h6 {
   object-fit: contain;
   padding: 20px 0 10px 0;
 }
-.phonename p:nth-of-type(2){
+.phonename p:nth-of-type(2) {
   margin: 10px 0;
 }
-.from{
+.from {
   margin: 20px 0 0 0;
-  font-size: .8em;
+  font-size: 0.8em;
 }
 .features div {
   padding: 20px 0;
@@ -217,7 +269,7 @@ h6 {
   background: #fff;
   padding: 10px;
   margin: 15px;
-  p{
+  p {
     color: #6e6e73;
   }
 }
@@ -268,7 +320,7 @@ h6 {
   font-size: 1.1em;
   margin: 10px;
 }
-.serv{
+.serv {
   margin: 30px 10px;
 }
 .secbtm {
@@ -333,7 +385,7 @@ h6 {
 }
 #app {
   padding: 0 0 30px 0;
-  .magair{
+  .magair {
     margin: 0 10px;
   }
 }
@@ -343,7 +395,7 @@ h6 {
   color: #0000007a;
   text-align: justify;
 }
-ol{
+ol {
   padding: 0 0 30px 30px;
   li {
     padding: 0;
@@ -354,7 +406,7 @@ footer {
   font-size: 0.8em;
   color: #000000bd;
 }
-footer p{
+footer p {
   margin: 20px 0;
 }
 .ftop {
@@ -379,6 +431,9 @@ footer p{
 }
 .footermenu div:nth-last-of-type(1) {
   border-bottom: none;
+}
+.footermenu .fa-chevron-up{
+  display: none;
 }
 label {
   display: flex;
@@ -405,7 +460,7 @@ input {
 .open:checked ~ .footernav {
   max-height: 250px;
 }
-.moreway{
+.moreway {
   color: var(--blue);
   text-decoration: underline;
 }
@@ -468,7 +523,7 @@ input {
   .guidtour .fa-circle-play {
     display: none;
   }
-  .guidtour{
+  .guidtour {
     height: 100vh;
     display: flex;
     align-items: center;
@@ -478,30 +533,21 @@ input {
   .guidtop {
     color: #fff;
   }
-  .watch {
-    display: inline-block;
-    background: #ffffffcc;
-    color: #000;
-    margin: 10px 0;
-    padding: 5px 15px;
-    border-radius: 15px;
-    font-size: 0.8em;
-  }
   .guidbtm {
     display: none;
   }
-  .phones{
+  .phones {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
   }
-  .phones hr{
+  .phones hr {
     width: 100%;
   }
-  .w20{
+  .w20 {
     width: 20%;
   }
-  .w25{
+  .w25 {
     width: 25%;
     padding: 10px;
   }
@@ -512,7 +558,7 @@ input {
   .w50 {
     width: 50%;
   }
-  .features .zoom{
+  .features .zoom {
     font: 600 1.4em Arial;
   }
   .allcard,
@@ -569,21 +615,21 @@ input {
   .one {
     height: 50px;
   }
-  .footermenu{
+  .footermenu {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    div{
+    div {
       border-bottom: none;
     }
-    .fa-chevron-down{
+    .fa-chevron-down {
       display: none;
     }
   }
-  .footernav{
+  .footernav {
     max-height: 250px;
   }
-  label a{
+  label a {
     font-size: 1.2em;
   }
 }
