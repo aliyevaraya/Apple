@@ -96,14 +96,14 @@
   background: transparent;
 }
 .links:hover::after {
-  animation: border 1.4s infinite ease-in-out;
+  animation: border 1s linear forwards;
 }
 @keyframes border {
-  from {
+  0% {
     background: transparent;
     width: 0;
   }
-  to {
+  100% {
     background: linear-gradient(90deg, yellow, orange, green, blue);
     width: 100%;
   }
