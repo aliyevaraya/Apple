@@ -443,7 +443,10 @@ input {
     display: none;
   }
   .titanbtm {
-    transform: rotate(-90deg);
+    height: 50vh;
+    width: 60%;
+    margin: auto;
+    background: url("../img/titanium-pc.png") center / contain no-repeat;
   }
   .newpbtm {
     height: 55vh;
