@@ -179,6 +179,10 @@ h6 {
 .phones{
   padding: 20px 0;
 }
+.phones hr{
+  width: 60%;
+  margin: auto;
+}
 .phonesimg {
   height: 300px;
   padding: 0 10px;
@@ -487,6 +491,9 @@ input {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+  }
+  .phones hr{
+    width: 100%;
   }
   .w20{
     width: 20%;
