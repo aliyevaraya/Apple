@@ -7,8 +7,10 @@
 .bggreylight {
   background: #fbfbfb;
 }
-#bars,
-#menu {
+input ,
+#menu,
+.headerslider::-webkit-scrollbar,
+.guidtop .links::after {
   display: none;
 }
 #bars:checked ~ #sidebar {
@@ -56,9 +58,6 @@
   justify-content: space-between;
   gap: 20px;
   overflow-x: scroll;
-}
-.headerslider::-webkit-scrollbar {
-  display: none;
 }
 .headerslider div {
   text-align: center;
@@ -119,9 +118,6 @@
 }
 .fa-arrow-up-right-from-square {
   margin: 0 10px 0 0;
-}
-.guidtop .links::after {
-  display: none;
 }
 @keyframes pale {
   from {
@@ -184,6 +180,10 @@ h5 {
   font: 600 1.3em Arial;
   padding: 15px 0;
 }
+.allcard h5{
+  padding: 30px;
+  font-size: 1.5em;
+}
 h6 {
   font: 400 1.1em Arial;
   margin: 10px;
@@ -208,8 +208,12 @@ h6 {
 #titanium .btn:hover {
   box-shadow: 3px 5px 7px rgb(172, 185, 236);
 }
-.titanbtm {
+.titanbtm,
+.lovebtm,
+.guidbtm{
   height: 50vh;
+}
+.titanbtm {
   background: url("../img/titanium-mobile.jpeg") center / contain no-repeat;
 }
 .newpbtm {
@@ -221,11 +225,9 @@ h6 {
   font-size: 1.2em;
 }
 .lovebtm {
-  height: 50vh;
   background: url("../img/lovebg.jpeg") center / contain no-repeat;
 }
 .guidbtm {
-  height: 50vh;
   background: url("../img/applebg12.jpeg") center / cover no-repeat;
 }
 .phones {
@@ -314,6 +316,9 @@ h6 {
   background: url("../img/airtag__b81h4czx41yq_medium.jpg") center/contain
     no-repeat;
 }
+.magtop{
+  padding: 0 10px;
+}
 .magtop p {
   max-width: 300px;
   margin: 15px auto;
@@ -326,9 +331,9 @@ h6 {
 .serv {
   padding: 30px 10px;
 }
-.secbtm {
+
+.magicbtm{
   height: 20vh;
-  margin: 10px 0;
   background: #fff url("../img/applebg9.jpeg") top / contain no-repeat;
 }
 .iosbtm {
@@ -345,6 +350,7 @@ h6 {
   flex-direction: column;
 }
 .sw_pr .secbtm {
+  margin: 10px 0;
   height: 40vh;
 }
 .one {
@@ -435,17 +441,11 @@ footer p {
 .footermenu div:nth-last-of-type(1) {
   border-bottom: none;
 }
-.footermenu .fa-chevron-up {
-  display: none;
-}
 label {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 16px 20px;
-}
-input {
-  display: none;
 }
 .footernav {
   max-height: 0;
@@ -467,15 +467,17 @@ input {
   color: var(--blue);
   text-decoration: underline;
 }
-  @media only screen and (min-width: 369px) {
-  .phonecard{
+@media only screen and (min-width: 369px) {
+  .phonecard {
     width: 50%;
   }
-  }
+}
 @media only screen and (min-width: 576px) {
-  .services{display: flex;
-  flex-wrap: wrap;}
-  .serv{
+  .services {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .serv {
     width: 50%;
   }
 }
@@ -509,11 +511,13 @@ input {
     width: 100%;
     left: 0;
   }
-  #menuicon {
+  #menuicon,
+  .guidtour .fa-circle-play,
+  .guidbtm,
+  .whybtm {
     display: none;
   }
   .titanbtm {
-    height: 50vh;
     width: 60%;
     margin: auto;
     background: url("../img/titanium-pc.png") center / contain no-repeat;
@@ -531,9 +535,6 @@ input {
     border-radius: 30px;
     margin: 20px;
   }
-  .guidtour .fa-circle-play {
-    display: none;
-  }
   .guidtour {
     height: 100vh;
     display: flex;
@@ -547,10 +548,7 @@ input {
   .guidtop .watch {
     color: #000;
   }
-  .guidbtm {
-    display: none;
-  }
-  .phonecard{
+  .phonecard {
     width: 25%;
     padding: 0 10px;
   }
@@ -560,13 +558,13 @@ input {
   .w20 {
     width: 20%;
   }
-  .card{
+  .card {
     width: 50%;
   }
-  .card1{
+  .card1 {
     width: 100%;
   }
-  .cards{
+  .cards {
     display: flex;
   }
   .w50 {
@@ -575,16 +573,9 @@ input {
   .features .zoom {
     font: 600 1.4em Arial;
   }
-  .allcard {
-    display: flex;
-    justify-content: space-between;
-  }
   #whyapple {
     height: 80vh;
     background: url("../img/applebg6.jpeg") center/cover no-repeat;
-  }
-  .whybtm {
-    display: none;
   }
   #whyapple div {
     max-width: 500px;
@@ -620,6 +611,7 @@ input {
     width: 300px;
     text-align: center;
     margin: 30px auto;
+    padding: 20px;
   }
   .sw_pr {
     flex-direction: row;
@@ -644,11 +636,11 @@ input {
   label a {
     font-size: 1.2em;
   }
-  .fbtm{
+  .fbtm {
     display: flex;
     justify-content: space-between;
     text-align: center;
-    p{
+    p {
       padding: 0 5px;
     }
   }
@@ -659,13 +651,19 @@ input {
     align-items: center;
     justify-content: center;
   }
-  .lovetop, .lovebtm{
+  .lovetop,
+  .lovebtm {
     width: 50%;
   }
-  .card1, .serv{
+  .allcard {
+    display: flex;
+    justify-content: space-between;
+  }
+  .card1,
+  .serv {
     width: 33.33%;
   }
-   .cards{
+  .cards {
     width: 66.66%;
   }
 }
