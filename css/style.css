@@ -108,16 +108,16 @@
     width: 100%;
   }
 }
-.guidtop .links {
+.guidtop .watch {
   display: inline-block;
   background: #ffffffcc;
-  color: #000;
+  color: var(--blue);
   margin: 10px 0;
   padding: 8px 20px;
   border-radius: 15px;
   font-size: 0.8em;
 }
-.fa-arrow-up-right-from-square{
+.fa-arrow-up-right-from-square {
   margin: 0 10px 0 0;
 }
 .guidtop .links::after {
@@ -229,6 +229,9 @@ h6 {
   background: url("../img/applebg12.jpeg") center / cover no-repeat;
 }
 .phones {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   padding: 20px 0;
 }
 .phones hr {
@@ -321,7 +324,7 @@ h6 {
   margin: 10px;
 }
 .serv {
-  margin: 30px 10px;
+  padding: 30px 10px;
 }
 .secbtm {
   height: 20vh;
@@ -432,7 +435,7 @@ footer p {
 .footermenu div:nth-last-of-type(1) {
   border-bottom: none;
 }
-.footermenu .fa-chevron-up{
+.footermenu .fa-chevron-up {
   display: none;
 }
 label {
@@ -463,6 +466,18 @@ input {
 .moreway {
   color: var(--blue);
   text-decoration: underline;
+}
+  @media only screen and (min-width: 369px) {
+  .phonecard{
+    width: 50%;
+  }
+  }
+@media only screen and (min-width: 576px) {
+  .services{display: flex;
+  flex-wrap: wrap;}
+  .serv{
+    width: 50%;
+  }
 }
 @media only screen and (min-width: 768px) {
   .container {
@@ -507,12 +522,8 @@ input {
     height: 55vh;
     background-size: cover;
   }
-  .love {
-    display: flex;
-    align-items: center;
-  }
   .lovebtm {
-    height: 80vh;
+    height: 100vh;
   }
   #guidtour {
     height: 100vh;
@@ -533,13 +544,15 @@ input {
   .guidtop {
     color: #fff;
   }
+  .guidtop .watch {
+    color: #000;
+  }
   .guidbtm {
     display: none;
   }
-  .phones {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+  .phonecard{
+    width: 25%;
+    padding: 0 10px;
   }
   .phones hr {
     width: 100%;
@@ -547,13 +560,14 @@ input {
   .w20 {
     width: 20%;
   }
-  .w25 {
-    width: 25%;
-    padding: 10px;
+  .card{
+    width: 50%;
   }
-  .card,
-  .serv {
-    width: 33.33%;
+  .card1{
+    width: 100%;
+  }
+  .cards{
+    display: flex;
   }
   .w50 {
     width: 50%;
@@ -561,8 +575,7 @@ input {
   .features .zoom {
     font: 600 1.4em Arial;
   }
-  .allcard,
-  .services {
+  .allcard {
     display: flex;
     justify-content: space-between;
   }
@@ -603,7 +616,6 @@ input {
   h2 {
     font-size: 2.8em;
   }
-
   #accessories h1 {
     width: 300px;
     text-align: center;
@@ -631,5 +643,29 @@ input {
   }
   label a {
     font-size: 1.2em;
+  }
+  .fbtm{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    p{
+      padding: 0 5px;
+    }
+  }
+}
+@media only screen and (min-width: 992px) {
+  .love {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .lovetop, .lovebtm{
+    width: 50%;
+  }
+  .card1, .serv{
+    width: 33.33%;
+  }
+   .cards{
+    width: 66.66%;
   }
 }
